@@ -1,0 +1,77 @@
+.food-pickup-form {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+  margin-bottom: 30px;
+  animation: slideUp 0.5s ease-out;
+}
+
+.food-pickup-form h3 {
+  color: var(--primary-green);
+  margin-bottom: 25px;
+  font-size: 1.3rem;
+}
+
+.form-section {
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.form-section:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.form-section h4 {
+  color: var(--primary-green);
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.food-item-input {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border-left: 4px solid var(--accent-green);
+}
+
+.food-item-input input,
+.food-item-input textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+.food-item-input textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.food-pickup-form button[type="file"] {
+  display: inline-block;
+}
+
+.food-pickup-form input[type="file"] {
+  padding: 10px;
+  border: 2px dashed var(--accent-green);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

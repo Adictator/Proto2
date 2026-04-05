@@ -1,0 +1,194 @@
+.home-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2d5016 0%, #4a7c2c 100%);
+  color: white;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 60px;
+  animation: slideIn 0.8s ease-out;
+}
+
+.logo {
+  margin-bottom: 30px;
+}
+
+.logo h1 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
+}
+
+.logo p {
+  font-size: 1.3rem;
+  color: var(--light-green);
+  font-weight: 300;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.main-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.option-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: var(--shadow-lg);
+  transition: all 0.3s ease;
+  border-left: 5px solid;
+  animation: slideUp 0.6s ease-out;
+}
+
+.option-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.option-card.volunteer {
+  border-left-color: #6fb52f;
+}
+
+.option-card.restaurant {
+  border-left-color: #ff9800;
+}
+
+.option-card.partner {
+  border-left-color: #3f51b5;
+}
+
+.card-header h2 {
+  color: var(--primary-green);
+  margin-bottom: 5px;
+  font-size: 1.8rem;
+}
+
+.card-subtitle {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.features {
+  list-style: none;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.features li {
+  color: var(--text-dark);
+  margin: 10px 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.button-group button {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: var(--accent-green);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--secondary-green);
+  transform: scale(1.02);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--accent-green);
+  border: 2px solid var(--accent-green);
+}
+
+.btn-secondary:hover {
+  background: var(--light-green);
+  color: white;
+  border-color: var(--light-green);
+}
+
+.animal-silhouettes {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-size: 3rem;
+  margin-top: 50px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .logo h1 {
+    font-size: 2.5rem;
+  }
+
+  .main-options {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .animal-silhouettes {
+    gap: 20px;
+    font-size: 2rem;
+  }
+}
